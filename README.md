@@ -20,7 +20,7 @@ Face Fatigue Detection is an application that uses a combination of face recogni
 ## Installation
 ### Clone the Repository
 
-```git
+```bash
 git clone https://github.com/nrysam/Face-Fatigue-Detection
 cd Face-Fatigue-Detection
 ```
@@ -29,7 +29,7 @@ cd Face-Fatigue-Detection
 ## Set Up the Environment
 ### Install Dependencies
 
-```cmd
+```bat
 pip install -r requirements.txt
 ```
 
