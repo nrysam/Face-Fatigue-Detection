@@ -20,35 +20,42 @@ Face Fatigue Detection is an application that uses a combination of face recogni
 ## Installation
 ### Clone the Repository
 
-`git clone https://github.com/nrysam/face-fatigue-detection.git
-cd face-fatigue-detection`
+```git
+git clone https://github.com/nrysam/Face-Fatigue-Detection
+cd Face-Fatigue-Detection
+```
 
 
 ## Set Up the Environment
 ### Install Dependencies
 
-`pip install -r requirements.txt`
+```cmd
+pip install -r requirements.txt
+```
 
 
 ### Database Setup
 Create a MySQL database and update the .env file with your database credentials:
-> DB_USER=your_db_user
->
-> DB_PASS=your_db_password
->
-> DB_HOST=your_db_host
->
-> DB_NAME=your_db_name
+```sql
+DB_USER=your_db_user
+DB_PASS=your_db_password
+DB_HOST=your_db_host
+DB_NAME=your_db_name
+```
+Remember to replace the user, password, host, and name with the actual database credentials. 
 
 
 ### Docker Setup
 **Build the Docker Image**
 
-`docker build -t face_fatigue_detection .`
+```cmd
+docker build -t face_fatigue_detection .
+```
 
 
 **Run the Docker Container**
-> docker run --rm -it \
+```cmd
+docker run --rm -it \
     --privileged \
     --device /dev/video0:/dev/video0 \
     -e DISPLAY=$DISPLAY \
@@ -56,6 +63,7 @@ Create a MySQL database and update the .env file with your database credentials:
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v "/path/to/your/local/registered_faces:/usr/src/app/registered_faces" \
     face_fatigue_detection
+```
 
 Replace **'/path/to/your/local/registered_faces'** with the actual path to the directory on your host machine where you want to store the registered face images.
 
@@ -95,9 +103,9 @@ If you encounter issues with webcam access in the Docker container, ensure that:
 
 ## X Server Access
 For GUI applications, ensure that your Docker container can access the X server on the host system:
-
-`xhost +local:root`
-
+```cmd
+xhost +local:root
+```
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
