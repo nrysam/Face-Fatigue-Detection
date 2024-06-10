@@ -20,7 +20,7 @@ Face Fatigue Detection is an application that uses a combination of face recogni
 ## Installation
 ### Clone the Repository
 
-`git clone https://github.com/your_username/face-fatigue-detection.git
+`git clone https://github.com/nrysam/face-fatigue-detection.git
 cd face-fatigue-detection`
 
 
